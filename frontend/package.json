@@ -1,0 +1,80 @@
+{
+	"name": "nexora",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"main": "electron/main.js",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"lint": "eslint .",
+		"preview": "vite preview",
+		"electron:dev": "electron .",
+		"electron:build": "electron-builder"
+	},
+	"dependencies": {
+		"@reduxjs/toolkit": "^2.10.1",
+		"@tanstack/react-table": "^8.21.3",
+		"axios": "^1.13.2",
+		"chart.js": "^4.5.1",
+		"react": "^19.1.1",
+		"react-chartjs-2": "^5.3.1",
+		"react-dom": "^19.1.1",
+		"react-redux": "^9.2.0",
+		"react-router-dom": "^6.30.1"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.36.0",
+		"@types/react": "^19.1.16",
+		"@types/react-dom": "^19.1.9",
+		"@vitejs/plugin-react": "^5.0.4",
+		"electron": "^33.4.11",
+		"electron-builder": "^25.1.8",
+		"eslint": "^9.36.0",
+		"eslint-plugin-react-hooks": "^5.2.0",
+		"eslint-plugin-react-refresh": "^0.4.22",
+		"globals": "^16.4.0",
+		"vite": "^7.1.7"
+	},
+	"productName": "Nexora",
+	"build": {
+		"appId": "com.Nexora",
+		"productName": "Nexora",
+		"directories": {
+			"output": "release",
+			"buildResources": "build"
+		},
+		"files": [
+			"dist/**",
+			"electron/main.js",
+			"electron/preload.js",
+			"package.json"
+		],
+		"extraResources": [
+			{
+				"from": "electron/assets",
+				"to": "assets",
+				"filter": [
+					"**/*"
+				]
+			}
+		],
+		"linux": {
+			"target": [
+				"tar.gz",
+				"deb"
+			],
+			"category": "Utility"
+		},
+		"win": {
+			"target": [
+				"nsis"
+			]
+		},
+		"mac": {
+			"target": [
+				"dmg"
+			]
+		}
+	}
+}
