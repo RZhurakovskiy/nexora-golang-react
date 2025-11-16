@@ -1,4 +1,4 @@
-# Nexora - система мониторинга в реальном времени
+# Nexora - Nexus Insight. Система мониторинга в реальном времени
 
 **Стек:** Go, React, Electron, WebSocket  
 **Платформы:** Linux, Windows  
