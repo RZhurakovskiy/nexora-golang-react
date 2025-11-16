@@ -1,5 +1,6 @@
 # Nexora - Nexus Insight. Система мониторинга в реальном времени
-**Старица приложения** https://nexora-real-time.vercel.app
+## Старица приложения https://nexora-real-time.vercel.app
+
 **Стек:** Go, React, Electron, WebSocket  
 **Платформы:** Linux, Windows  
 
